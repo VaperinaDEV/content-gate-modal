@@ -46,7 +46,7 @@ svg_icons:
   description: "List of FontAwesome 5 icons used in this theme component"
 content_gate_redirect_url:
   type: string
-  default: "/tos"
+  default: ""
   description: "For example, /tos is goes to the Terms of Service page."
 content_gate_footer_position:
   default: center
