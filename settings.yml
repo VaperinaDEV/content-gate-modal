@@ -1,0 +1,102 @@
+hide_for_groups:
+  type: list
+  list_type: simple
+  default: ""
+  description: "Control who can see the Content Gate modal.<br>Enter group names to hide to specific groups."
+url_for_show:
+  type: list
+  list_type: simple
+  default: ""
+  description: "Enter paths that should display the Content Gate modal.<br>Add <code>*</code> to the end of the path as a wildcard.<br>For example: <br> All page: <code>*</code> <br> Homepage: <code>/</code> <br> Latest: <code>/latest</code> <br> Topics: <code>/t/*</code> <br> Categories: <code>/c/*</code>"
+url_for_hide:
+  type: list
+  list_type: simple
+  default: "/admin*"
+  description: "Enter paths that should hide the Content Gate modal.<br>Add <code>*</code> to the end of the path as a wildcard.<br>For example: <br> Terms of Service page: <code>/tos</code> <br> Specific topic: <code>/t/tos/99999*</code>"
+max_content_gate_page_views:
+  type: string
+  default: "1"
+  description: "Number of page views until Content Gate modal displays. After the gate first appears, it appears randomly between 1 and this number."
+content_gate_show_only_once:
+  type: bool
+  default: false
+  description: "Content Gate modal show only once per session."
+dismissable_false:
+  type: bool
+  default: false
+  description: "Removes the close button, which prevents users from closing it."
+use_content_gate_button:
+  type: bool
+  default: false
+  description: "Use button on Content Gate modal footer instead of link."
+content_gate_button_style:
+  type: enum
+  default: btn-default
+  choices:
+    - btn-primary
+  description: "Content Gate modal button style. btn-primary is a blue (tertiary) colored button by default. btn-default is a grey (primary-low) colored button by default."
+content_gate_icon:
+  type: string
+  default: ""
+  description: "Add icon to the button."
+svg_icons: 
+  default: ""
+  type: "list"
+  list_type: "compact"
+  description: "List of FontAwesome 5 icons used in this theme component"
+content_gate_redirect_url:
+  type: string
+  default: "/tos"
+  description: "For example, /tos is goes to the Terms of Service page."
+content_gate_footer_position:
+  default: center
+  type: enum
+  choices:
+    - left
+    - right
+  description: "Footer button/link position."
+content_gate_image:
+  type: upload
+  default: ""
+  description: "Upload an image to display at the top of the modal."
+content_gate_image_width:
+  type: string
+  default: "150px"
+  description: "The uploaded image width. You can use px, % etc, e.g. 100% will add a full modal width (minus padding) image."
+content_gate_image_position:
+  default: center
+  type: enum
+  choices:
+    - left
+    - right
+  description: "Content Gate modal image position."
+content_gate_big_text_position:
+  default: center
+  type: enum
+  choices:
+    - left
+    - right
+  description: "Content Gate modal big text (h2) position."
+content_gate_little_text_position:
+  default: center
+  type: enum
+  choices:
+    - left
+    - right
+  description: "Content Gate modal little text (p) position."
+content_gate_big_text_color:
+  type: string
+  default: "var(--primary)"
+  description: "The “big text” appears below the image. You can set the color of the text."
+content_gate_little_text_color:
+  type: string
+  default: "var(--primary)"
+  description: "The “little text” appears below the big text. You can set the color of the text."
+content_gate_background_color:
+  type: string
+  default: "var(--secondary)"
+  description: "Change the modal background color."
+content_gate_link_color:
+  type: string
+  default: "var(--primary-medium)"
+  description: "Change the footer link color. This applies if the use gate buttons setting is disabled."

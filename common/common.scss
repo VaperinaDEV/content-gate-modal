@@ -1,0 +1,28 @@
+#discourse-modal.content-gate-modal {
+  .modal-inner-container {
+    background-color: #{$content_gate_background_color};
+  }
+  .modal-footer {
+    justify-content: #{$content_gate_footer_position};
+    color: #{$content_gate_link_color};
+    a {
+     color: #{$content_gate_link_color};
+    }
+  }
+  .content-gate-content {
+    text-align: #{$content_gate_image_position};
+    img {
+      width: #{$content_gate_image_width};
+      height: auto;
+      margin-bottom: 0.75em;
+    }
+    h2 {
+      color: #{$content_gate_big_text_color};
+      text-align: #{$content_gate_big_text_position};
+    }
+    p {
+      color: #{$content_gate_little_text_color};
+      text-align: #{$content_gate_little_text_position};
+    }
+  }
+}

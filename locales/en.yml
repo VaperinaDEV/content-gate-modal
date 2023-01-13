@@ -1,0 +1,6 @@
+en:
+  content_gate:
+    title: "Modal title"
+    redirect_link_label: "Link label"
+    big_text: "Big text"
+    little_text: "Little text"

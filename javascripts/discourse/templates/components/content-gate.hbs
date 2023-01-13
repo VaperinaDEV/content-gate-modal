@@ -1,0 +1,30 @@
+{{#if (theme-setting 'dismissable_false')}}
+  <DModalBody @title={{theme-prefix "content_gate.title"}} @dismissable={{false}}>
+    <div class="content-gate-content">
+      <img src="{{theme-setting 'content_gate_image'}}"/>
+      <h2>{{theme-i18n "content_gate.big_text"}}</h2>
+      <p>{{{theme-i18n "content_gate.little_text"}}}</p>
+    </div>
+  </DModalBody>
+  {{else}}
+  <DModalBody @title={{theme-prefix "content_gate.title"}}>
+    <div class="content-gate-content">
+        <img src="{{theme-setting 'content_gate_image'}}"/>
+        <h2>{{theme-i18n "content_gate.big_text"}}</h2>
+        <p>{{{theme-i18n "content_gate.little_text"}}}</p>
+      </div>
+  </DModalBody>
+{{/if}}
+
+<div class="modal-footer">
+  {{#if (theme-setting 'use_content_gate_button') }}
+    <DButton 
+      @class={{theme-setting "content_gate_button_style"}}
+      @icon={{theme-setting "content_gate_icon"}}
+      @label={{theme-prefix "content_gate.redirect_link_label"}}
+      @href={{theme-setting "content_gate_redirect_url"}} 
+    />
+    {{else}}
+    <a href="{{theme-setting 'content_gate_redirect_url'}}">{{theme-i18n "content_gate.redirect_link_label"}}</a>
+  {{/if}}
+</div>
